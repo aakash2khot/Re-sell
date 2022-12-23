@@ -9,13 +9,17 @@ function App(){
     setItems((prev)=>{return [...prev,item]});
   }
   return (
-       <div>
+    <section>
+       <div class="itms">
+
            <Header />
            {items.map(
                 (itemEntry,index) => <Item key={index} index={index} name={itemEntry.name} price={itemEntry.price} />
             )}
            <Footer />
        </div>
+       </section>
+
    );
 
 }
