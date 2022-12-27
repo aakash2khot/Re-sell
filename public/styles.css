@@ -1,0 +1,7 @@
+.itemsList{
+    display:flex;
+    margin: 3% auto;
+}
+.item{
+    margin: auto 5%;
+}

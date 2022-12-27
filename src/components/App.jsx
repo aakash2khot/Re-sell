@@ -10,12 +10,14 @@ function App(){
   }
   return (
     <section>
-       <div class="itms">
+       <div class="">
 
            <Header />
+           <div class="itemsList">
            {items.map(
                 (itemEntry,index) => <Item key={index} index={index} name={itemEntry.name} price={itemEntry.price} />
             )}
+            </div>
            <Footer />
        </div>
        </section>
