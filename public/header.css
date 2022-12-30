@@ -1,4 +1,4 @@
-.form-control-dark {
+/* .form-control-dark {
   border-color: var(--bs-gray);
 }
 .form-control-dark:focus {
@@ -12,4 +12,7 @@
 
 .dropdown-toggle {
   outline: 0;
+} */
+#topName{
+  margin-right:100px;
 }
