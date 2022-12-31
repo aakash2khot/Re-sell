@@ -7,7 +7,8 @@
 }
 
 #topName{
-    margin-right:30px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    margin-right:25px;
     margin-left: -5%;
     display: flex;
   }
@@ -18,17 +19,18 @@
     border-color: #fff;
     box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
   }
-  
+
   .text-small {
     font-size: 85%;
   }
-  
+
   .dropdown-toggle {
     outline: 0;
   }
 #icon{
-    margin-right:30px;
+    margin-right:20px;
     display: flex;
+
   }
 
   .item {
@@ -49,45 +51,64 @@
     border-radius: 0% 0% 20% 20% / 0% 0% 5% 5% ;
     box-shadow: 4px 4px rgba(0,0,0,.25);
   }
-
+.nav-link{
+  font-size: 10px;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+.col-12{
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+.text-end{
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
   .category{
-      margin: auto 5%;
+      margin: auto 6%;
       display:block;
+        border: 8px  groove #088F8F;
+      /* border: 8px  groove #0080ff;  */
+      border-block-style: groove;
+
       text-align: center;
       justify-content: center;
       align-items: center;
+      padding-bottom: 1%;
       width: 250px;
-      height: 200px;
+      height: 140px;
       border-radius: 10% 10% 10% 10%;
-      background-color: aquamarine;
-      
-      
+      background-color: #40B5AD ;
+      /* background-color: #1a8cff; */
+
+
   }
   .categoryList{
     /* max-width: 500px;
     min-width: 500px; */
-    
+
     margin: 5% auto;
     /* background-color: black; */
     /* width: 250px; */
-      height: 30%;
-    background-color: black;
+      height: 40%;
+    background-color: #29262A;
+    /* background-color: #262A29; */
     justify-content: center;
       align-items: center;
 }
 .categoryListpart{
     display: flex;
     padding-top: 2%;
-    padding-bottom: 2%;
+    padding-bottom: 4%;
     justify-content: center;
       align-items: center;
-      
+
 }
 #catName{
-    padding-top: 30%;
+    padding-top: 18%;
+    font-family: Helvetica, sans-serif;
+
 }
 #catHead{
     padding-top: 1%;
     text-align: center;
-    color: white;
+    color: #E5FAF1;
+    font-family: Apple Chancery, cursive;
 }

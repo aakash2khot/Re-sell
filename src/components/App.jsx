@@ -21,7 +21,7 @@ function App(){
             )}
             </div>
             <div class="categoryList">
-              <div><h2 id="catHead">Browse all our categories...</h2></div>
+              <div><h3 id="catHead">Browse all our categories...</h3></div>
               <div class="categoryListpart">
                 {(categories.slice(0,3)).map(
                       (categoryEntry,index) => <Category key={index} index={index} name={categoryEntry.name} />
