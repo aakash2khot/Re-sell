@@ -4,6 +4,7 @@ import Footer from "./Footer"
 import Item from "./Item"
 import Category from "./Categories"
 import {Login} from "./Login"
+
 import {Register} from "./Register"
 function App(){
   const [items, setItems]=React.useState([{name:"Example1",price:"Rs 1999"},{name:"Example2",price:"Rs 999"}]);
@@ -11,12 +12,16 @@ function App(){
   function addItem(item){
     setItems((prev)=>{return [...prev,item]});
   }
-
-  return (
+  // var home=true;
+  const [home, setHome]=React.useState(true);
+  function showLogin(ans){
+    setHome(()=>{return !ans;});
+  }
+  if(home){return (
     <section>
        <div class="">
 
-           <Header />
+           <Header showLogin={showLogin}/>
            <div class="itemsList">
            {items.map(
                 (itemEntry,index) => <Item key={index} index={index} name={itemEntry.name} price={itemEntry.price} />
@@ -39,7 +44,20 @@ function App(){
        </div>
        </section>
 
-   );
+   );}
+   else{
+    return (
+      <section>
+         <div class="">
+  
+             <Header />
+             <Login />
+             <Footer />
+         </div>
+         </section>
+  
+     );
+   }
 
 }
 export default App;

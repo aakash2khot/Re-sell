@@ -12,13 +12,14 @@ import {Routes, Route, useNavigate} from 'react-router-dom';
 //       </div>
 //   );
 // }
-function Header(){
-  const navigateToLogin = (event) => {
-    console.log("heloo");
-    const navigate = useNavigate();
-    navigate(Login);
-    //render(Login);
-  };
+function Header(props){
+  
+  // const navigateToLogin = (event) => {
+  //   console.log("heloo");
+  // const navigate = useNavigate();
+  //   navigate(Login);
+  //   //render(Login);
+  // };
   return(
 
     // <Login/>
@@ -45,7 +46,7 @@ function Header(){
         </form>
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2" onClick={(event) =>{navigateToLogin(event);}}>Login</button>
+          <button type="button" class="btn btn-outline-light me-2" onClick={(event) =>{console.log("hello"); props.showLogin(true);}}>Login</button>
           <button type="button" class="btn btn-warning">Sign-up</button>
         </div>
       </div>
@@ -84,4 +85,5 @@ function Header(){
 //         </section>
 //     );
 // }
+//const navigate = useNavigate(); navigate('./Login')
 export default Header;
