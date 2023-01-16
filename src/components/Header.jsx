@@ -1,5 +1,8 @@
 import React from 'react';
-
+import {Login} from "./Login"
+import {Register} from "./Register"
+import {Routes, Route, useNavigate} from 'react-router-dom';
+//import { render } from 'react-dom/cjs/react-dom.production.min';
 // function Header(){
 //   return(
 //       <div className="header fixed flex">
@@ -10,14 +13,23 @@ import React from 'react';
 //   );
 // }
 function Header(){
+  const navigateToLogin = (event) => {
+    console.log("heloo");
+    const navigate = useNavigate();
+    navigate(Login);
+    //render(Login);
+  };
   return(
+
+    // <Login/>
+
     <header class="p-3 text-bg-dark">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
       <div id="topName"><h2>Re-sell</h2></div>
       <div id="icon">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <img class="bi me-2" width="70" height="70" padding-left="1px" src={require("../img/icon.png")}/>
+          <img className="bi me-2" width="70" height="70" padding-left="1px" src={require("../img/icon.png")}/>
         </a>
         </div>
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -33,7 +45,7 @@ function Header(){
         </form>
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-outline-light me-2" onClick={(event) =>{navigateToLogin(event);}}>Login</button>
           <button type="button" class="btn btn-warning">Sign-up</button>
         </div>
       </div>

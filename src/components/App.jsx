@@ -3,13 +3,15 @@ import Header from "./Header"
 import Footer from "./Footer"
 import Item from "./Item"
 import Category from "./Categories"
-
+import {Login} from "./Login"
+import {Register} from "./Register"
 function App(){
   const [items, setItems]=React.useState([{name:"Example1",price:"Rs 1999"},{name:"Example2",price:"Rs 999"}]);
   const [categories, setCategories]=React.useState([{name:"Smartphones"},{name:"Headphones"},{name:"Furniture"},{name:"Laptops"},{name:"Bikes"},{name:"Cars"}]);
   function addItem(item){
     setItems((prev)=>{return [...prev,item]});
   }
+
   return (
     <section>
        <div class="">
