@@ -17,11 +17,13 @@ function App(){
   function showLogin(ans){
     setHome(()=>{return !ans;});
   }
+ 
   if(home){return (
     <section>
        <div class="">
 
            <Header showLogin={showLogin}/>
+
            <div class="itemsList">
            {items.map(
                 (itemEntry,index) => <Item key={index} index={index} name={itemEntry.name} price={itemEntry.price} />
@@ -47,7 +49,9 @@ function App(){
    );}
    else{
     return (
+      
       <section>
+        <link rel="Login" href="Login.css" />
          <div class="">
   
              <Header />
