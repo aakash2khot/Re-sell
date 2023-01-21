@@ -46,8 +46,8 @@ function Header(props){
         </form>
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2" onClick={(event) =>{console.log("hello"); props.showLogin(true);}}>Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
+          <button type="button" class="btn btn-outline-light me-2" onClick={(event) =>{props.showPage("login");}}>Login</button>
+          <button type="button" class="btn btn-warning" onClick={(event) =>{props.showPage("register");}}>Sign-up</button>
         </div>
       </div>
     </div>

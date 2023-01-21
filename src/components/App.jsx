@@ -13,16 +13,16 @@ function App(){
     setItems((prev)=>{return [...prev,item]});
   }
   // var home=true;
-  const [home, setHome]=React.useState(true);
-  function showLogin(ans){
-    setHome(()=>{return !ans;});
+  const [page, setPage]=React.useState("home");
+  function showPage(ans){
+    setPage(()=>{return ans;});
   }
  
-  if(home){return (
+  if(page=="home"){return (
     <section>
        <div class="">
 
-           <Header showLogin={showLogin}/>
+           <Header showPage={showPage}/>
 
            <div class="itemsList">
            {items.map(
@@ -47,15 +47,29 @@ function App(){
        </section>
 
    );}
-   else{
+   else if(page=="login"){
     return (
       
       <section>
         <link rel="Login" href="Login.css" />
          <div class="">
   
-             <Header />
-             <Login />
+             <Header showPage={showPage}/>
+             <Login showPage={showPage}/>
+             <Footer />
+         </div>
+         </section>
+  
+     );
+   }
+   else if(page=="register"){
+    return (
+      
+      <section>
+         <div class="">
+  
+             <Header showPage={showPage}/>
+             <Register  showPage={showPage}/>
              <Footer />
          </div>
          </section>
